@@ -29,35 +29,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   W  |   X  |   C  |   V  |   B  |   N  |   ,  |   ;  |   :  |  !   |Shift |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | CTRL | GUI  | Alt  | INS  |Lower |Space |Space |Raise | Left | Down |  Up  |Right |
+ * | CTRL | GUI  | Alt  | INS  |Lower |Enter |Space |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_AZERTY] = LAYOUT( \
-  ADJUST,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL, \
-  KC_TAB,  FR_A,    FR_Z,    FR_E,    FR_R,    FR_T,    FR_Y,    FR_U,    FR_I,    FR_O,    FR_P,    KC_BSPC, \
-  KC_ESC,  FR_Q,    FR_S,    FR_D,    FR_F,    FR_G,    FR_H,    FR_J,    FR_K,    FR_L,    FR_M,    KC_ENT, \
-  KC_LSFT, FR_W,    FR_X,    FR_C,    FR_V,    FR_B,    FR_N,    FR_COMM,    FR_SCLN, FR_COLN,  FR_EXLM, KC_RSFT , \
-  KC_LCTL,  KC_LGUI, KC_LALT, KC_INS, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT \
+  ADJUST  , KC_1    , KC_2    , KC_3   , KC_4    , KC_5   , KC_6   , KC_7    , KC_8    , KC_9    , KC_0    , KC_DEL    , \
+  KC_TAB  , FR_A    , FR_Z    , FR_E   , FR_R    , FR_T   , FR_Y   , FR_U    , FR_I    , FR_O    , FR_P    , KC_BSPC   , \
+  KC_ESC  , FR_Q    , FR_S    , FR_D   , FR_F    , FR_G   , FR_H   , FR_J    , FR_K    , FR_L    , FR_M    , KC_BSPC   , \
+  LOWER   , FR_W    , FR_X    , FR_C   , FR_V    , FR_B   , FR_N   , FR_COMM , FR_SCLN , FR_COLN , FR_EXLM , RAISE     , \
+  KC_LCTL , KC_LGUI , KC_LALT , KC_INS , KC_LSFT , KC_SPC , KC_ENT , KC_RSFT , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT \
 ),
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |      |      |   #  |   °  |   `  |   <  |   >  |   7  |   8  |   9  |   %  |      |
+ * |      |      |   #  |   °  |   `  |   <  |   >  |   ^  |   /  |   *  |   %  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |   $  |   |  |   ~  |   "  |   {  |   }  |   4  |   5  |   6  |   ^  |      |
+ * |      |   PND  |   |  |   ~  |   "  |   {  |   }  |   7  |   8  |   9  |   -  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |   €  |   =  |   _  |   .  |   (  |   )  |   1  |   2  |   3  |   0  |      |
+ * |      |   €  |   =  |   _  |   .  |   (  |   )  |   4  |   5  |   6  |   +  |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  Pnd |   &  |   \  |   '  |   [  |   ]  |   +  |   /  |   *  |   -  |      |
+ * |      |  $   |   &  |   \  |   '  |   [  |   ]  |   1  |   2  |   3  |   0  |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |             |      | Debut|PageUp|PageDo| End  |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT( \
-  _______ , _______ , FR_HASH , FR_DEG  , FR_GRV  , FR_LABK , FR_RABK , KC_P7   , KC_P8   , KC_P9   , FR_PERC , _______   , \
-  _______ , FR_DLR  , FR_PIPE , KC_TILD , FR_DQUO , FR_LCBR , FR_RCBR , KC_P4   , KC_P5   , KC_P6   , FR_CIRC , _______   , \
-  _______ , FR_EURO , FR_EQL  , FR_UNDS , FR_DOT  , FR_LPRN , FR_RPRN , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_PIPE   , \
-  _______ , FR_PND  , FR_AMPR , FR_BSLS , FR_QUOT , FR_LCBR , FR_RCBR , FR_PLUS , FR_SLSH , _______ , _______ , _______   , \
+  _______ , _______ , FR_HASH , FR_DEG  , FR_GRV  , FR_LABK , FR_RABK , FR_CIRC , FR_SLSH , FR_ASTR , FR_PERC , _______   , \
+  _______ , FR_PND  , FR_PIPE , FR_TILD , FR_DQUO , FR_LCBR , FR_RCBR , KC_P7   , KC_P8   , KC_P9   , FR_MINS , _______   , \
+  _______ , FR_EURO , FR_EQL  , FR_UNDS , FR_DOT  , FR_LPRN , FR_RPRN , KC_P4   , KC_P5   , KC_P6   , FR_PLUS , KC_PIPE   , \
+  _______ , FR_DLR  , FR_AMPR , FR_BSLS , FR_QUOT , FR_LBRC , FR_RBRC , KC_P1   , KC_P2   , KC_P3   , KC_P0   , _______   , \
   _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_HOME , KC_PGUP , KC_PGDN , KC_END  \
 ),
 
@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______ , _______ , _______ , _______ , _______ , FR_LABK , FR_RABK , KC_F9   , KC_F10  , KC_F11  , KC_F12  , _______   , \
   _______ , FR_MICR , FR_CCED , FR_UGRV , FR_AT   , FR_LCBR , FR_RCBR , KC_F5   , KC_F6   , KC_F7   , KC_F8   , _______   , \
   _______ , FR_SECT , FR_EGRV , FR_AGRV , FR_EACU , FR_LPRN , FR_RPRN , KC_F1   , KC_F2   , KC_F3   , KC_F4   , _______   , \
-  _______ , _______ , FR_SLSH , FR_DOT  , FR_QUES , FR_LCBR , FR_RCBR , KC_NUBS , _______ , _______ , _______ , _______   , \
+  _______ , _______ , FR_SLSH , FR_DOT  , FR_QUES , FR_LBRC , FR_RBRC , KC_NUBS , _______ , _______ , _______ , _______   , \
   _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_MNXT , KC_VOLD , KC_VOLU , KC_MPLY \
 ),
 
